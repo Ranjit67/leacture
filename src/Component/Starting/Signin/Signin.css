@@ -1,0 +1,52 @@
+
+.Signin{
+    margin-top: 72px;
+    
+}
+.leftsign{
+    height: 700px;
+    background-color: #03989E;
+}
+.middelSign{
+    height: 700px;
+}
+.rightSignin{
+    height: 700px;
+    background-color: #03989E;
+}
+.photoCont{
+    position: absolute;
+    background-color: blue;
+    width: 600px;
+    height: 550px;
+    top: 100px;
+    left: 220px;
+    background: url("../../../assert/photo/depositphotos_203056626-stock-photo-young-smiling-woman-hold-hand.jpg");
+    background-repeat: no-repeat;
+    background-size: 840px;
+}
+
+.circle{
+    background-color: #FF57A8;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    right: 540px;
+    height: 300px;
+    width: 300px;
+}
+.circle .boost{
+    top: 80px;
+    left: 50px;
+    position: absolute;
+    font-size: 25px;
+    font-style: italic;
+}
+.career{
+    top: 140px;
+    left: 150px;
+    position: absolute;
+    font-size: 25px;
+    font-style: italic;
+}

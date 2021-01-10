@@ -1,0 +1,93 @@
+.RightSignin{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    
+}
+.RightSignin h2{
+    font-family: 'Playfair Display', serif;
+}
+
+.signinuserNameclass{
+    margin-top: 40px;
+}
+
+.signinPasswordclass{
+    margin-top: 20px;
+}
+.signinPasswordclass input[type=password], .signinuserNameclass input[type=text]{
+    background-color: #acd5d6;
+    text-align: center;
+    font-style: italic;
+    width: 400px;
+    height: 60px;
+    border: none;
+
+}
+.signinPasswordclass input:focus, .signinuserNameclass input:focus{
+    background-color: whitesmoke;
+}
+
+ .SigninButton button{
+background-color: #FF57A8;
+border-radius: 5px;
+height: 40px;
+width: 150px;
+font-size: 20px;
+font-family: 'Playfair Display', serif;
+}
+.SigninButton button:focus, .SigninButton button:active{
+    background-color:#e487b5 ;
+}
+
+.SigninButton{
+    margin: 60px;
+}
+
+
+
+.CreateAccountDiv{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    background-color: yellowgreen;
+    position: relative;
+}
+.CreateAccountDiv h3{
+    margin-right: 40px;
+}
+
+.signupButton button{
+    background-color: violet;
+    border-radius: 30px;
+    height: 40px;
+width: 150px;
+font-size: 20px;
+}
+
+.bookMark{
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 10px;
+   color: #8854d0;
+    /* width: 1200px; */
+}
+
+
+.emptyUserPass{
+   text-align: center;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+    width: 60%;
+    animation: emptypassUser 0.3s  ease-in both;
+}
+@keyframes emptypassUser{
+    from{transform: scaleX(0);}
+    to{transform: scaleX(1);}
+}

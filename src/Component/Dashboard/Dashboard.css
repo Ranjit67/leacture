@@ -1,0 +1,113 @@
+.DashboardContent{
+    width: 100%;
+}
+.Dashboard{
+    margin-top: 72px;
+    width: 100%;
+    height: 650px;
+    /* background-color: blue; */
+    overflow: auto;
+    /* background: url("https://res.cloudinary.com/dnrnwqpel/image/upload/v1607753935/learning/library_kj4buq.jpg") no-repeat center center fixed; */
+    background: linear-gradient(rgba(0, 0, 0,0.9), rgba(52, 73, 94,0.5)),  url("https://res.cloudinary.com/dnrnwqpel/image/upload/v1607753935/learning/library_kj4buq.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    align-items: center;
+   
+}
+
+/* add button */
+.Add{
+    z-index: 200;
+    bottom: 40px;
+    right: 40px;
+    background-color: #FF57A8;
+    position: fixed;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+/* model items css */
+.modelItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.placeMode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addPlaylistPapear{                     /* modal papear css */
+    border-radius: 5px;
+    padding: 60px 60px 40px 60px;
+    animation: modalan 1s ease-out both;
+}
+@keyframes modalan{
+    0%{transform: translateY(-400px);}
+    50%{transform: translateY(50px);}
+    100%{transform: translateY(0);}
+}
+
+.playlistName{
+    margin-bottom: 20px;
+   
+}
+.playlistNameInput input[type=text]{
+    height: 30px;
+    width: 420px;
+    border-color: green;
+    font-family: 'Lobster', cursive;
+   
+    font-size: 20px;
+}
+.playlistName p,.imageputer p{
+    margin-right: 20px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.warnUplodepicforButton{
+    color: red;
+    margin-left: 60px;
+}
+.buttonsCont{
+    margin: 20px 10px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitPlaylist{
+    margin-right: 15px;
+}
+.submitPlaylist button{
+    background-color: green;
+    height: 30px;
+    width: 120px;
+}
+.cancelPlaylist button{
+    height: 30px;
+    width: 120px;
+    background-color: red;
+    
+}
+.warnMassage{color: red;}
+
+
+/* box fotter animation  */
+.overCSS{
+    animation: over 0.5s ease-in both;
+    transform-origin: bottom;
+}
+
+@keyframes over{
+   from{transform: rotateX(90deg);}
+    to{transform: rotateX(0deg);}
+}
+

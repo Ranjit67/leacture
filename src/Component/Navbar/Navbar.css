@@ -1,0 +1,14 @@
+.Navbar{
+    position: ;
+    width: 100%;
+    height: 72px;
+    background-color: #FF57A8;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+   
+}
+
+.menuIcone{
+    margin: 20px;
+}

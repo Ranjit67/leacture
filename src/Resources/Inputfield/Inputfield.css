@@ -1,0 +1,10 @@
+.forInput input[type=text] , .forInput input[type=password]{
+    /* border: none; */
+    border-radius: 10px;
+   
+}
+.forInput input:focus{
+    outline: none;
+    /* border: red solid 5px; */
+}
+

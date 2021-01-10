@@ -1,0 +1,41 @@
+/* small squer box css */
+.block{
+    height: 200px;
+    width: 230px;
+  
+    position: relative;
+    margin: 30px 0 10px 45px;
+    display: inline-flex;
+}
+
+/* block fotter */
+.blockFotter{
+    /* background-color: black; */
+    background: linear-gradient(rgba(46, 204, 113,0.8), rgba(231, 76, 60,1.0));
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+   transform: rotateX(90deg);
+}
+/* .blockFotter:hover{
+
+    transform: rotateX(360deg);
+} */
+
+
+/* 
+box title content */
+.titleContent{
+    width: 91%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px 10px 10px;
+    background: linear-gradient(rgba(16, 172, 132,0.7), rgba(243, 104, 224,0.4));
+}
+.titleContent h4{
+    margin-top: 0;
+    color: black;
+}

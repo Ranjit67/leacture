@@ -1,0 +1,188 @@
+.Signup{
+    margin-top: 72px;
+    background-color: #03989E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 1000px; */
+}
+.Signup h2{
+    font-family: 'Playfair Display', serif;
+    color:white;
+}
+
+.nameSignup input[type=text],.emailSignup input[type=text], .githubSignup input[type=text],
+.linkdnSignup input[type=text], .passSignup input[type=password], .rePassSignup input[type=password]
+{
+text-align: center;
+width: 400px;
+height: 60px;
+margin: 15px;
+border: none;
+}
+/* .emailSignup input:focus, .passSignup input:focus, .rePassSignup input:focus{
+    border: red solid 4px;
+} */
+.emailCorrect input:focus{
+background-color: #4cd137;
+opacity: 0.4;
+font-size: 20px;
+}
+.emailCorrect input[type=text]{
+    text-align: center;
+width: 400px;
+height: 60px;
+margin: 15px;
+border: #4cd137 solid 4px;
+font-size: 20px;
+}
+.emailWrong input:focus{
+    border-color: red;
+} 
+.emailWrong input[type=text]{
+    border: red solid 4px;
+    text-align: center;
+width: 400px;
+height: 60px;
+margin: 15px;
+}
+/* {
+    text-align: center;
+width: 400px;
+height: 60px;
+margin: 15px;
+border: #4cd137 solid 4px;
+} */
+
+.githubSignup{
+
+}
+.linkdnSignup{
+
+}
+.passSignup{
+
+}
+.rePassSignup{
+
+}
+
+.element{
+    display: flex;
+}
+.element p{
+color: white;
+margin-left: 5px;
+}
+
+.alreadyAccount{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+  
+    position: relative;
+}
+
+.alreadyAccount h2{
+    margin-right: 40px;
+}
+
+.alreadyASignin button{
+    background-color: violet;
+    border-radius: 30px;
+    height: 40px;
+width: 150px;
+font-size: 20px;
+}
+
+.SignupSubmit button{
+    border-radius: 30px;
+    height: 40px;
+width: 150px;
+font-size: 20px;
+background-color: #FF57A8;
+/* cursor: no-drop; */
+}
+.SignupSubmit{
+    margin: 80px;
+}
+.SignupSubmit button:disabled {
+    background: #dddddd;
+  cursor: no-drop;
+  }
+.profilePhotoU{
+    margin: 30px;
+}
+.avatar{
+    width: 300px;
+    height: 300px;
+}
+/* .profilePhotoU input[type=file]{
+    border:0 0 1px 0;
+    background-color: transparent;
+    width: 150px;
+    height: 60px;
+} */
+
+
+
+
+/* password content */
+
+.initial{
+    visibility: hidden;
+    height: 0;
+   
+    
+}
+.changeCall{
+    visibility: visible;
+    background-color: #130f40;
+   
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.needDefaultPassword{
+    color: red;
+}
+
+.active{
+    color: #6ab04c;
+    font-size: 20px;
+    animation: item 0.5s ease-in both ;
+}
+@keyframes item{
+    0%{transform: translateX(10px);}
+    50%{transform: translateX(-4px);}
+    100%{transform: translateX(0);}
+}
+.notMatch{
+    margin-top: 0;
+    background-color: red;
+    text-align: center;
+}
+.match{
+    margin-top: 0;
+    background-color: #6ab04c;
+    text-align: center;
+}
+
+/* match not match display */
+.notVisibul{
+    visibility: hidden;
+    height: 0;
+}
+
+.bottom{
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.vMessage, .pMessage{
+    color: red;
+}

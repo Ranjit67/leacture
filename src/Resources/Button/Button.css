@@ -1,0 +1,8 @@
+.buttonDiv button{
+    border: none;
+    box-sizing: border-box;
+    
+    }
+    .buttonDiv button:focus{
+    outline: none;
+    }
