@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {withRouter } from "react-router-dom";
-
+import { Link} from "react-router-dom";
 import Input from "../../Resources/Inputfield/Inputfield";
 import Button from "../../Resources/Button/Button";
 import "./Signup.css";
@@ -117,7 +117,7 @@ toastHandler(s,classer){
         }
         
 
-       await fetch("http://localhost:9000/signup",{
+       await fetch("https://leacteer-api.herokuapp.com/signup",{
         method: "POST",
        
            headers: {
@@ -348,11 +348,11 @@ nameHandler=(e)=>{
 
     <div className="alreadyAccount">
 <h2>if you have already Acccount</h2>
-<a href="/"><Button
+<Link to="/"><Button
 clas="alreadyASignin"
 click={()=>0}
 >
-     SIGNIN</Button></a>
+     SIGNIN</Button></Link>
         </div>
 
         <h2>SIGNUP</h2>

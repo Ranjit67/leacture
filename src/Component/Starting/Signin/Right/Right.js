@@ -1,5 +1,5 @@
 import {useState, memo} from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link} from "react-router-dom";
 import Inputfield from "../../../../Resources/Inputfield/Inputfield";
 import Button from "../../../../Resources/Button/Button";
 import BookmarkIcon from '@material-ui/icons/Bookmark';
@@ -17,10 +17,7 @@ const Right =(props)=>{
     const [boleanstate, setboleanstate] = useState(false)
     const [error, seterror] = useState(false)
 
-    const fn=()=>{
-
-   alert("hit the click");
-    }
+   
 
 
 const clickhandler=async ()=>{
@@ -99,12 +96,13 @@ const passwordHandler = (e)=>{
             <div className="CreateAccountDiv"> 
             <BookmarkIcon className="bookMark" fontSize="large"/>
             <h3>Create Account </h3>
+            <Link to="/signup">
 
             <Button
         clas="signupButton"
-        click={fn}
+        click={()=>{return 0}}
         >
-            Signup </Button>
+            Signup </Button></Link>
 
             </div>
             
