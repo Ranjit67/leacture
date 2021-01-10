@@ -37,7 +37,7 @@ routingFunction = (param) => {
 //    refresh function
 refresh = async (p)=>{
  
-    await fetch("/refreshtoken",{
+    await fetch("https://leacteer-api.herokuapp.com/refreshtoken",{
         method: "PATCH",
        
            headers: {
@@ -78,7 +78,7 @@ playlistCreate = async()=>{
     //     thumbnail:this.state.imageUrl.value}
     //     console.log(this.state.playlistName+" "+this.state.imageUrl.value);
 
-    await fetch("/createplaylist",{
+    await fetch("https://leacteer-api.herokuapp.com/createplaylist",{
         method: "POST",
        
            headers: {
