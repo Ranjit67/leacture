@@ -128,7 +128,7 @@ playlistCreate = async()=>{
 // dashboard function
 dashboard = async ()=>{
     // console.log(sessionStorage.getItem("NA_R"));
-    await fetch("http://localhost:9000/dashboard",{
+    await fetch("https://leacteer-api.herokuapp.com/dashboard",{
         method: "POST",
        
            headers: {
