@@ -34,8 +34,8 @@ routingFunction = (param) => {
 }
 //    refresh function
 refresh = async (p)=>{
- 
-    await fetch("http://localhost:9000/refreshtoken",{
+ //https://leacteer-api.herokuapp.com/
+    await fetch("https://leacteer-api.herokuapp.com/refreshtoken",{
         method: "PATCH",
        
            headers: {
@@ -76,7 +76,7 @@ playlistCreate = async()=>{
     //     thumbnail:this.state.imageUrl.value}
     //     console.log(this.state.playlistName+" "+this.state.imageUrl.value);
 
-    await fetch("http://localhost:9000/createplaylist",{
+    await fetch("https://leacteer-api.herokuapp.com/createplaylist",{
         method: "POST",
        
            headers: {
@@ -127,7 +127,8 @@ playlistCreate = async()=>{
 // dashboard function
 dashboard = async ()=>{
     // console.log(sessionStorage.getItem("NA_R"));
-    await fetch("http://localhost:9000/dashboard",{
+    //https://leacteer-api.herokuapp.com/
+    await fetch("https://leacteer-api.herokuapp.com/dashboard",{
         method: "POST",
        
            headers: {

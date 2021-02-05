@@ -20,8 +20,8 @@ export default class Logout extends Component {
         const data=JSON.stringify({
             refreshToken:datas
         })
-        
-        await fetch("http://localhost:9000/logout",{
+        //localhost
+        await fetch("https://leacteer-api.herokuapp.com/logout",{
             method: "DELETE",
                headers: {
                 'Accept': 'application/json',
