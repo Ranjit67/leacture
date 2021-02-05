@@ -1,0 +1,9 @@
+.leftsider{
+    padding-top: 5px;
+    height: 100%;
+    width: 35%;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}

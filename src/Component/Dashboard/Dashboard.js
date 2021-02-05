@@ -7,8 +7,6 @@ import Input from "../../Resources/Inputfield/Inputfield"
 import Box from "../../Resources/Box/Box";
 import "./Dashboard.css";
 import Cookies from 'universal-cookie';
-
-
 const cookies = new Cookies();
 // const history=useHistory();
 
@@ -37,7 +35,7 @@ routingFunction = (param) => {
 //    refresh function
 refresh = async (p)=>{
  
-    await fetch("https://leacteer-api.herokuapp.com/refreshtoken",{
+    await fetch("http://localhost:9000/refreshtoken",{
         method: "PATCH",
        
            headers: {
@@ -78,7 +76,7 @@ playlistCreate = async()=>{
     //     thumbnail:this.state.imageUrl.value}
     //     console.log(this.state.playlistName+" "+this.state.imageUrl.value);
 
-    await fetch("https://leacteer-api.herokuapp.com/createplaylist",{
+    await fetch("http://localhost:9000/createplaylist",{
         method: "POST",
        
            headers: {
@@ -124,11 +122,12 @@ playlistCreate = async()=>{
        })
        .catch(err=>console.log(err))
 } 
-
+//http://localhost:9000
+//https://leacteer-api.herokuapp.com
 // dashboard function
 dashboard = async ()=>{
     // console.log(sessionStorage.getItem("NA_R"));
-    await fetch("https://leacteer-api.herokuapp.com/dashboard",{
+    await fetch("http://localhost:9000/dashboard",{
         method: "POST",
        
            headers: {
@@ -241,6 +240,8 @@ console.log(data);
     render(){
         return(
             <div className="DashboardContent">
+                
+                
                 {/* model work */}
                 {this.state.modelControle ?
                 <Modal

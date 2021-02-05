@@ -7,6 +7,8 @@ import Dashboard from "./Component/Dashboard/Dashboard";
 import Proatected from "./Component/protected/Proatected";
 import Protectfree from "./Component/protected/Protectfree";
 import Error from "./Component/Error/Error"
+import Logout from "./Component/Logout/Logout"
+import Matrialpalate from "./Component/Matrialplate/Matrialpalate"
 // import './App.css';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
   
 
    <Proatected exact path="/dashboard" component={Dashboard} />
+   <Proatected exact path="/logout" component={Logout} />
+   <Route path="/matrial" component={Matrialpalate} />
    <Route component={Error} />
    </Switch>
    </BrowserRouter>

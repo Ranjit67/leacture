@@ -1,0 +1,47 @@
+.menu{
+    
+    left: 0;
+    background-color: rgba(255, 235, 205, 0.9);
+    width: 24%;
+    height: 500px;
+    z-index: 500;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+ 
+}
+
+.menuShow{
+    left: 0;
+    background-color: rgba(255, 235, 205, 0.9);
+    width: 24%;
+     
+    z-index: 500;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    animation: show linear 0.5s both;
+    overflow: hidden;
+}
+@keyframes show{
+    from{height: 0px;}
+    to{height: 500px;}
+}
+.menuHide{
+    left: 0;
+    background-color: rgba(255, 235, 205, 0.9);
+    width: 24%;
+    z-index: 500;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    animation: hide linear 0.5s both;
+    overflow: hidden;
+}
+@keyframes hide{
+    to{height: 0px;}
+    from{height: 500px;}
+}

@@ -1,0 +1,32 @@
+.videoplay{
+    /* padding-top: 70px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(206, 176, 176);
+}
+
+
+.video-js{
+    width: 850px;
+    height: 550px;
+    margin-top: 50px;
+    display: block;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.082);
+}
+.vjs-poster {
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+ .vjs-big-play-button {
+    background-color: #e84393 !important; 
+    border: none !important; 
+}
+.vjs-big-play-button:hover{
+    background-color: #fd79a8 !important;
+}

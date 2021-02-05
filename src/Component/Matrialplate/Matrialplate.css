@@ -1,0 +1,11 @@
+.matrialplate{
+    margin-top: 72px;
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+
+

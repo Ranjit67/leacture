@@ -1,10 +1,10 @@
-import {useState, memo} from 'react';
+import {useState, memo } from 'react';
 import { useHistory, Link} from "react-router-dom";
 import Inputfield from "../../../../Resources/Inputfield/Inputfield";
 import Button from "../../../../Resources/Button/Button";
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import Cookies from 'universal-cookie';
- 
+ import Auth from "../../../../context/auth-context"
 import "./Right.css";
 
 
@@ -17,8 +17,9 @@ const Right =(props)=>{
     const [boleanstate, setboleanstate] = useState(false)
     const [error, seterror] = useState(false)
 
+    // const contexts = useContext(Auth);
+    
    
-
 
 const clickhandler=async ()=>{
     if(!username || !password){
@@ -29,12 +30,13 @@ const clickhandler=async ()=>{
         email:username,
         password:password
     })
-    await fetch("https://leacteer-api.herokuapp.com/signin",{
+    //http://localhost:9000
+//https://leacteer-api.herokuapp.com
+    await fetch("http://localhost:9000/signin",{
         method: "POST",
            headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Sec-Fetch-Mode': 'no-cors'
           },
           body: data
        }).then(response=>response.json())
@@ -46,6 +48,7 @@ const clickhandler=async ()=>{
             seterror(true)
            }
            if(data.token){
+            
             cookies.set('SID', data.refresToken, {maxAge: 24 * 60 * 60})
         sessionStorage.setItem("NA_R", data.token)
         history.push("/dashboard")
@@ -63,6 +66,7 @@ const usernameHandler = (e)=>{
     setUsername(e.target.value)
 }
 const passwordHandler = (e)=>{
+    
     setPassword(e.target.value)
     seterror(false)
     setboleanstate(false)
@@ -70,6 +74,8 @@ const passwordHandler = (e)=>{
 
     return(
     <div className="RightSignin">
+        
+                
         <h2>SIGNIN</h2>
        {boleanstate && <div className="emptyUserPass"><h4>you can not leave empty any singel place.</h4> </div>} 
        {error && <div className="emptyUserPass"><h4>Check ypur username and password.</h4> </div>}
@@ -97,12 +103,14 @@ const passwordHandler = (e)=>{
             <BookmarkIcon className="bookMark" fontSize="large"/>
             <h3>Create Account </h3>
             <Link to="/signup">
-
-            <Button
+<Auth.Consumer>
+    {context=><Button
         clas="signupButton"
-        click={()=>{return 0}}
+        click={context.login}
         >
-            Signup </Button></Link>
+            Signup </Button>}
+</Auth.Consumer>
+            </Link>
 
             </div>
             
