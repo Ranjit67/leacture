@@ -2,7 +2,7 @@
 .block{
     height: 200px;
     width: 230px;
-  
+  cursor: pointer;
     position: relative;
     margin: 30px 0 10px 45px;
     display: inline-flex;

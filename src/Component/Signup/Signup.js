@@ -59,6 +59,7 @@ class Signup extends Component{
             type:"",
             bolean:false
         },
+        coverPapear:false,
 
     }
      emailArray=["emailSignup"];
@@ -104,7 +105,7 @@ toastHandler(s,classer){
 
     clickHandler= async ()=>{
         const {name,email, github, linkdin, password, rePassword,image,video }= this.state;
-        console.log(name.value+ " "+email.value+" "+github.value+" "+linkdin.value+" "+password.value+" "+image.data+" "+video.data);
+        
     //  fetch
     let datas={
         name:name.value,
@@ -116,10 +117,10 @@ toastHandler(s,classer){
         password:password.value
         }
         
-
+        console.log(datas)
+        this.setState({coverPapear:true})
        await fetch("https://leacteer-api.herokuapp.com/signup",{
         method: "POST",
-       
            headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -128,6 +129,8 @@ toastHandler(s,classer){
        })
        .then(response=>response.json())
        .then(data=>{
+        this.setState({coverPapear:false})
+
            if(data.error && data.error.status===409){
            
                 this.toastHandler("This email id is allready registerd.","warning");
@@ -491,7 +494,13 @@ disab={!(upercase.test(this.state.password.value) && lowercase.test(this.state.p
 
 {/* toast */}
 <Toast toastControle={this.state.toast}/>
+{this.state.coverPapear && <div className="coverPapearForSignup" style={{position:"absolute",left:0,top:0,
+height:"100%",
+width:"100%",
+backgroundColor:"rgba(0,0,0,0.7)"
+}}>
 
+</div>}
     </div>
         );
     }

@@ -13,6 +13,7 @@
     width: 140px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 .rightsider button:focus{
     outline: none;
